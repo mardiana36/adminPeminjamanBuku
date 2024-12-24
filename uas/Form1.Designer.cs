@@ -32,13 +32,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRegistrasi = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inputPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.inputUsername = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Login = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -56,11 +56,11 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.btnRegistrasi);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.inputPassword);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.inputUsername);
             this.panel2.Controls.Add(this.txtUsername);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.Login);
@@ -97,15 +97,19 @@
             this.panel4.Size = new System.Drawing.Size(340, 5);
             this.panel4.TabIndex = 3;
             // 
-            // textBox1
+            // inputPassword
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Location = new System.Drawing.Point(32, 247);
-            this.textBox1.MaximumSize = new System.Drawing.Size(0, 40);
-            this.textBox1.MinimumSize = new System.Drawing.Size(100, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 40);
-            this.textBox1.TabIndex = 8;
+            this.inputPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputPassword.Location = new System.Drawing.Point(32, 247);
+            this.inputPassword.Margin = new System.Windows.Forms.Padding(0);
+            this.inputPassword.MinimumSize = new System.Drawing.Size(100, 40);
+            this.inputPassword.Multiline = true;
+            this.inputPassword.Name = "inputPassword";
+            this.inputPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.inputPassword.Size = new System.Drawing.Size(340, 40);
+            this.inputPassword.TabIndex = 8;
+            this.inputPassword.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label1
             // 
@@ -119,17 +123,6 @@
             this.label1.Size = new System.Drawing.Size(340, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "Password";
-            // 
-            // inputUsername
-            // 
-            this.inputUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.inputUsername.Location = new System.Drawing.Point(32, 156);
-            this.inputUsername.MaximumSize = new System.Drawing.Size(0, 40);
-            this.inputUsername.MinimumSize = new System.Drawing.Size(100, 40);
-            this.inputUsername.Name = "inputUsername";
-            this.inputUsername.Size = new System.Drawing.Size(340, 40);
-            this.inputUsername.TabIndex = 4;
-            this.inputUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtUsername
             // 
@@ -186,6 +179,20 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(32, 150);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox1.MinimumSize = new System.Drawing.Size(100, 40);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(340, 40);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,11 +219,11 @@
         private System.Windows.Forms.Label Login;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label txtUsername;
-        private System.Windows.Forms.TextBox inputUsername;
         private System.Windows.Forms.Button btnRegistrasi;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inputPassword;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
