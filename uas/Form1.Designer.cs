@@ -101,10 +101,10 @@
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Location = new System.Drawing.Point(32, 247);
-            this.textBox1.MaximumSize = new System.Drawing.Size(0, 40);
+            this.textBox1.MaximumSize = new System.Drawing.Size(4, 40);
             this.textBox1.MinimumSize = new System.Drawing.Size(100, 40);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(340, 40);
+            this.textBox1.Size = new System.Drawing.Size(100, 40);
             this.textBox1.TabIndex = 8;
             // 
             // label1
@@ -124,10 +124,10 @@
             // 
             this.inputUsername.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.inputUsername.Location = new System.Drawing.Point(32, 156);
-            this.inputUsername.MaximumSize = new System.Drawing.Size(0, 40);
+            this.inputUsername.MaximumSize = new System.Drawing.Size(4, 40);
             this.inputUsername.MinimumSize = new System.Drawing.Size(100, 40);
             this.inputUsername.Name = "inputUsername";
-            this.inputUsername.Size = new System.Drawing.Size(340, 40);
+            this.inputUsername.Size = new System.Drawing.Size(100, 40);
             this.inputUsername.TabIndex = 4;
             this.inputUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
