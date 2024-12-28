@@ -51,5 +51,21 @@ namespace uas
         {
 
         }
+        bool statusPw = false;
+        private void showHide_Click(object sender, EventArgs e)
+        {
+            statusPw = !statusPw;
+            
+            if (!statusPw)
+            {
+                inputPassword.PasswordChar = '*';
+                showHide.Image = Properties.Resources.icons8_hide_100;
+            }
+            else
+            {
+                inputPassword.PasswordChar = '\0';
+                showHide.Image = Properties.Resources.icons8_show_100;
+            }
+        }
     }
 }
