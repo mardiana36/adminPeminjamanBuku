@@ -9,3 +9,4 @@ D:\C#\uas\uas\obj\Debug\uas.csproj.CoreCompileInputs.cache
 D:\C#\uas\uas\obj\Debug\uas.exe
 D:\C#\uas\uas\obj\Debug\uas.pdb
 D:\C#\uas\uas\obj\Debug\uas.Form3.resources
+D:\C#\uas\uas\obj\Debug\uas.buku.resources
