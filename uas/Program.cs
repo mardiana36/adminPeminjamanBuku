@@ -16,7 +16,7 @@ namespace uas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new buku());
+            Application.Run(new tambahAnggota());
         }
     }
 }
