@@ -71,6 +71,7 @@
     </Compile>
     <Compile Include="editBuku.Designer.cs">
       <DependentUpon>editBuku.cs</DependentUpon>
+	</Compile>
     <Compile Include="cPengembalian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +139,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="editBuku.resx">
       <DependentUpon>editBuku.cs</DependentUpon>
+	</EmbeddedResource>
     <Compile Include="uPeminjaman.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +188,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tambahBuku.resx">
       <DependentUpon>tambahBuku.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="uPeminjaman.resx">
       <DependentUpon>uPeminjaman.cs</DependentUpon>
     </EmbeddedResource>

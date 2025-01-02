@@ -1,4 +1,3 @@
-
 D:\C#\uas\uas\bin\Debug\uas.exe.config
 D:\C#\uas\uas\bin\Debug\uas.exe
 D:\C#\uas\uas\bin\Debug\uas.pdb
@@ -13,3 +12,13 @@ D:\C#\uas\uas\obj\Debug\uas.Form3.resources
 D:\C#\uas\uas\obj\Debug\uas.buku.resources
 D:\C#\uas\uas\obj\Debug\uas.Anggota.resources
 D:\C#\uas\uas\obj\Debug\uas.tambahAnggota.resources
+D:\C#\uas\uas\obj\Debug\uas.EditAnggota.resources
+D:\C#\uas\uas\obj\Debug\uas.editBuku.resources
+D:\C#\uas\uas\obj\Debug\uas.cPeminjaman.resources
+D:\C#\uas\uas\obj\Debug\uas.cPengembalian.resources
+D:\C#\uas\uas\obj\Debug\uas.cPengembalian2.resources
+D:\C#\uas\uas\obj\Debug\uas.peminjaman.resources
+D:\C#\uas\uas\obj\Debug\uas.pengembalian.resources
+D:\C#\uas\uas\obj\Debug\uas.tambahBuku.resources
+D:\C#\uas\uas\obj\Debug\uas.uPeminjaman.resources
+D:\C#\uas\uas\obj\Debug\uas.uPengembalian.resources
