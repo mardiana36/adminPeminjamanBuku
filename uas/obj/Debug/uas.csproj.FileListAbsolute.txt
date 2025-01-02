@@ -1,0 +1,11 @@
+D:\C#\uas\uas\bin\Debug\uas.exe.config
+D:\C#\uas\uas\bin\Debug\uas.exe
+D:\C#\uas\uas\bin\Debug\uas.pdb
+D:\C#\uas\uas\obj\Debug\uas.csproj.AssemblyReference.cache
+D:\C#\uas\uas\obj\Debug\uas.Form1.resources
+D:\C#\uas\uas\obj\Debug\uas.Properties.Resources.resources
+D:\C#\uas\uas\obj\Debug\uas.csproj.GenerateResource.cache
+D:\C#\uas\uas\obj\Debug\uas.csproj.CoreCompileInputs.cache
+D:\C#\uas\uas\obj\Debug\uas.exe
+D:\C#\uas\uas\obj\Debug\uas.pdb
+D:\C#\uas\uas\obj\Debug\uas.Form3.resources
