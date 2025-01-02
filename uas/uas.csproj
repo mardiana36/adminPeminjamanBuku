@@ -47,7 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anggota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anggota.Designer.cs">
+      <DependentUpon>Anggota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buku.Designer.cs">
+      <DependentUpon>buku.cs</DependentUpon>
+    </Compile>
     <Compile Include="connectionDB.cs" />
+    <Compile Include="EditAnggota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAnggota.Designer.cs">
+      <DependentUpon>EditAnggota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editBuku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editBuku.Designer.cs">
+      <DependentUpon>editBuku.cs</DependentUpon>
     <Compile Include="cPengembalian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +115,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tambahAnggota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tambahAnggota.Designer.cs">
+      <DependentUpon>tambahAnggota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tambahBuku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tambahBuku.Designer.cs">
+      <DependentUpon>tambahBuku.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Anggota.resx">
+      <DependentUpon>Anggota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buku.resx">
+      <DependentUpon>buku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAnggota.resx">
+      <DependentUpon>EditAnggota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editBuku.resx">
+      <DependentUpon>editBuku.cs</DependentUpon>
     <Compile Include="uPeminjaman.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +181,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="tambahAnggota.resx">
+      <DependentUpon>tambahAnggota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tambahBuku.resx">
+      <DependentUpon>tambahBuku.cs</DependentUpon>
     <EmbeddedResource Include="uPeminjaman.resx">
       <DependentUpon>uPeminjaman.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +210,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-hide-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
