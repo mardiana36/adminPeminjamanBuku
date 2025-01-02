@@ -71,6 +71,17 @@
     </Compile>
     <Compile Include="editBuku.Designer.cs">
       <DependentUpon>editBuku.cs</DependentUpon>
+    <Compile Include="cPengembalian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cPengembalian.Designer.cs">
+      <DependentUpon>cPengembalian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cPengembalian2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cPengembalian2.Designer.cs">
+      <DependentUpon>cPengembalian2.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -78,11 +89,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="cPeminjaman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cPeminjaman.Designer.cs">
+      <DependentUpon>cPeminjaman.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="peminjaman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="peminjaman.Designer.cs">
+      <DependentUpon>peminjaman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pengembalian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pengembalian.Designer.cs">
+      <DependentUpon>pengembalian.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,12 +138,38 @@
     </EmbeddedResource>
     <EmbeddedResource Include="editBuku.resx">
       <DependentUpon>editBuku.cs</DependentUpon>
+    <Compile Include="uPeminjaman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uPeminjaman.Designer.cs">
+      <DependentUpon>uPeminjaman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uPengembalian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uPengembalian.Designer.cs">
+      <DependentUpon>uPengembalian.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cPeminjaman.resx">
+      <DependentUpon>cPeminjaman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cPengembalian.resx">
+      <DependentUpon>cPengembalian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cPengembalian2.resx">
+      <DependentUpon>cPengembalian2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="peminjaman.resx">
+      <DependentUpon>peminjaman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pengembalian.resx">
+      <DependentUpon>pengembalian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,6 +186,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tambahBuku.resx">
       <DependentUpon>tambahBuku.cs</DependentUpon>
+    <EmbeddedResource Include="uPeminjaman.resx">
+      <DependentUpon>uPeminjaman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uPengembalian.resx">
+      <DependentUpon>uPengembalian.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

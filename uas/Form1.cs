@@ -44,7 +44,8 @@ namespace uas
 
         private void btnRegistrasi_Click(object sender, EventArgs e)
         {
-
+            peminjaman form = new peminjaman();
+            form.Show();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
