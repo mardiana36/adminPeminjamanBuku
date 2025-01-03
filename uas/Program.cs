@@ -16,7 +16,7 @@ namespace uas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new cPeminjaman());
+            Application.Run(new dashboard());
         }
     }
 }
