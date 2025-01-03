@@ -36,5 +36,16 @@ namespace uas
         {
 
         }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            peminjaman pj = new peminjaman();
+            pj.Show();
+            this.Hide();
+        }
+
+
+
     }
 }
