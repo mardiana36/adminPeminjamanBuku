@@ -29,5 +29,39 @@ namespace uas
             uPengembalian uPengembalian = new uPengembalian();
             uPengembalian.Show();
         }
+
+        private void peminjamanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            peminjaman pj = new peminjaman();
+            pj.Show();
+            this.Close();
+        }
+
+        private void anggotaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Anggota ag = new Anggota();
+            ag.Show();
+            this.Close();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            buku bk = new buku();
+            bk.Show();
+            this.Close();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is cPeminjaman)
+                {
+                    form.Show();
+                    this.Close();
+                    return;
+                }
+            }
+        }
     }
 }
