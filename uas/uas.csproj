@@ -34,6 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.9.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
@@ -59,7 +63,6 @@
     <Compile Include="buku.Designer.cs">
       <DependentUpon>buku.cs</DependentUpon>
     </Compile>
-    <Compile Include="connectionDB.cs" />
     <Compile Include="dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +105,7 @@
     <Compile Include="cPeminjaman.Designer.cs">
       <DependentUpon>cPeminjaman.cs</DependentUpon>
     </Compile>
+    <Compile Include="getConnection.cs" />
     <Compile Include="peminjaman.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +199,7 @@
     <EmbeddedResource Include="uPengembalian.resx">
       <DependentUpon>uPengembalian.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
