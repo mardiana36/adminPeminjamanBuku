@@ -28,7 +28,8 @@ namespace uas
                 MessageBox.Show("koneksi berhasil", "suksess", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 conn.Close();
-             }
+            }
+        }
         private void peminjamanToolStripMenuItem_Click(object sender, EventArgs e)
         {
             peminjaman pj = new peminjaman();
