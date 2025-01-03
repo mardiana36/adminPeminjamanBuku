@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(peminjaman));
             System.Windows.Forms.ToolStripMenuItem pERPUSTAKAANToolStripMenuItem;
             System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
             System.Windows.Forms.ToolStripMenuItem peminjamanToolStripMenuItem;
             System.Windows.Forms.ToolStripMenuItem pengembalianToolStripMenuItem;
             System.Windows.Forms.ToolStripMenuItem anggotaToolStripMenuItem;
             System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(peminjaman));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
@@ -61,6 +61,60 @@
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // pERPUSTAKAANToolStripMenuItem
+            // 
+            pERPUSTAKAANToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            pERPUSTAKAANToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
+            pERPUSTAKAANToolStripMenuItem.Name = "pERPUSTAKAANToolStripMenuItem";
+            pERPUSTAKAANToolStripMenuItem.Size = new System.Drawing.Size(299, 50);
+            pERPUSTAKAANToolStripMenuItem.Text = "PERPUSTAKAAN";
+            // 
+            // dashboardToolStripMenuItem
+            // 
+            dashboardToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dashboardToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            dashboardToolStripMenuItem.Size = new System.Drawing.Size(161, 50);
+            dashboardToolStripMenuItem.Text = "Dashboard";
+            // 
+            // peminjamanToolStripMenuItem
+            // 
+            peminjamanToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            peminjamanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            peminjamanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            peminjamanToolStripMenuItem.Name = "peminjamanToolStripMenuItem";
+            peminjamanToolStripMenuItem.Size = new System.Drawing.Size(194, 50);
+            peminjamanToolStripMenuItem.Text = "Peminjaman";
+            // 
+            // pengembalianToolStripMenuItem
+            // 
+            pengembalianToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            pengembalianToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
+            pengembalianToolStripMenuItem.Name = "pengembalianToolStripMenuItem";
+            pengembalianToolStripMenuItem.Size = new System.Drawing.Size(200, 50);
+            pengembalianToolStripMenuItem.Text = "Pengembalian";
+            pengembalianToolStripMenuItem.Click += new System.EventHandler(this.pengembalianToolStripMenuItem_Click);
+            // 
+            // anggotaToolStripMenuItem
+            // 
+            anggotaToolStripMenuItem.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            anggotaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            anggotaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            anggotaToolStripMenuItem.Name = "anggotaToolStripMenuItem";
+            anggotaToolStripMenuItem.Size = new System.Drawing.Size(136, 50);
+            anggotaToolStripMenuItem.Text = "Anggota";
+            anggotaToolStripMenuItem.Click += new System.EventHandler(this.anggotaToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new System.Drawing.Size(89, 50);
+            toolStripMenuItem1.Text = "Buku";
+            toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // panel1
             // 
@@ -204,60 +258,9 @@
             this.menuStrip1.Location = new System.Drawing.Point(353, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.menuStrip1.Size = new System.Drawing.Size(1167, 74);
+            this.menuStrip1.Size = new System.Drawing.Size(1317, 74);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // pERPUSTAKAANToolStripMenuItem
-            // 
-            pERPUSTAKAANToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pERPUSTAKAANToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
-            pERPUSTAKAANToolStripMenuItem.Name = "pERPUSTAKAANToolStripMenuItem";
-            pERPUSTAKAANToolStripMenuItem.Size = new System.Drawing.Size(299, 50);
-            pERPUSTAKAANToolStripMenuItem.Text = "PERPUSTAKAAN";
-            // 
-            // dashboardToolStripMenuItem
-            // 
-            dashboardToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dashboardToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new System.Drawing.Size(161, 50);
-            dashboardToolStripMenuItem.Text = "Dashboard";
-            // 
-            // peminjamanToolStripMenuItem
-            // 
-            peminjamanToolStripMenuItem.BackColor = System.Drawing.Color.White;
-            peminjamanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            peminjamanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            peminjamanToolStripMenuItem.Name = "peminjamanToolStripMenuItem";
-            peminjamanToolStripMenuItem.Size = new System.Drawing.Size(194, 50);
-            peminjamanToolStripMenuItem.Text = "Peminjaman";
-            // 
-            // pengembalianToolStripMenuItem
-            // 
-            pengembalianToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pengembalianToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
-            pengembalianToolStripMenuItem.Name = "pengembalianToolStripMenuItem";
-            pengembalianToolStripMenuItem.Size = new System.Drawing.Size(200, 50);
-            pengembalianToolStripMenuItem.Text = "Pengembalian";
-            // 
-            // anggotaToolStripMenuItem
-            // 
-            anggotaToolStripMenuItem.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            anggotaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            anggotaToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            anggotaToolStripMenuItem.Name = "anggotaToolStripMenuItem";
-            anggotaToolStripMenuItem.Size = new System.Drawing.Size(136, 50);
-            anggotaToolStripMenuItem.Text = "Anggota";
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new System.Drawing.Size(89, 50);
-            toolStripMenuItem1.Text = "Buku";
             // 
             // toolStripMenuItem2
             // 
@@ -279,7 +282,7 @@
             this.userNameToolStripMenuItem.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.userNameToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
-            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.userNameToolStripMenuItem.Text = "UserName : ";
             // 
             // emailToolStripMenuItem
@@ -287,7 +290,7 @@
             this.emailToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
             this.emailToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
-            this.emailToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.emailToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.emailToolStripMenuItem.Text = "Email : ";
             // 
             // toolStripSeparator1
@@ -295,15 +298,16 @@
             this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripSeparator1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.Red;
             this.logoutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // peminjaman
             // 
@@ -315,6 +319,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "peminjaman";
             this.Text = "peminjaman";
+            this.Load += new System.EventHandler(this.peminjaman_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -61,5 +61,40 @@ namespace uas
         {
 
         }
+
+        private void peminjamanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            peminjaman pj = new peminjaman();
+            pj.Show();
+            this.Close();
+        }
+
+        private void pengembalianToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pengembalian pg = new pengembalian();
+            pg.Show();
+            this.Close();
+        }
+
+        private void anggotaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Anggota ag = new Anggota();
+            ag.Show();
+            this.Close();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form is cPeminjaman)
+                {
+                    form.Show();  
+                    this.Close();  
+                    return;
+                }
+            }
+        }
     }
 }
