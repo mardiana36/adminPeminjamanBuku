@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\C#\\uas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|d:\\c#\\uas\\uas\\cpengembalian2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|solutionrelative:uas\\cpengembalian2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|d:\\c#\\uas\\uas\\editanggota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|solutionrelative:uas\\editanggota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|d:\\c#\\uas\\uas\\cpengembalian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|solutionrelative:uas\\cpengembalian.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|d:\\c#\\uas\\uas\\cpeminjaman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|solutionrelative:uas\\cpeminjaman.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|d:\\c#\\uas\\uas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|solutionrelative:uas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|D:\\C#\\uas\\uas\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CECE0A5A-FB59-4987-91AA-BC6E30D7740B}|uas\\uas.csproj|solutionrelative:uas\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +42,43 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "cPengembalian2.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\uas\\uas\\cPengembalian2.cs",
+              "RelativeDocumentMoniker": "uas\\cPengembalian2.cs",
+              "ToolTip": "D:\\C#\\uas\\uas\\cPengembalian2.cs [Design]",
+              "RelativeToolTip": "uas\\cPengembalian2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T02:36:40.065Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "EditAnggota.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\uas\\uas\\EditAnggota.cs",
+              "RelativeDocumentMoniker": "uas\\EditAnggota.cs",
+              "ToolTip": "D:\\C#\\uas\\uas\\EditAnggota.cs [Design]",
+              "RelativeToolTip": "uas\\EditAnggota.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T02:36:09.472Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "cPengembalian.cs [Design]",
+              "DocumentMoniker": "D:\\C#\\uas\\uas\\cPengembalian.cs",
+              "RelativeDocumentMoniker": "uas\\cPengembalian.cs",
+              "ToolTip": "D:\\C#\\uas\\uas\\cPengembalian.cs [Design]",
+              "RelativeToolTip": "uas\\cPengembalian.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-03T02:36:06.444Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\C#\\uas\\uas\\Program.cs",
               "RelativeDocumentMoniker": "uas\\Program.cs",
@@ -38,12 +86,11 @@
               "RelativeToolTip": "uas\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T10:32:51.964Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T10:32:51.964Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "cPeminjaman.cs [Design]",
               "DocumentMoniker": "D:\\C#\\uas\\uas\\cPeminjaman.cs",
               "RelativeDocumentMoniker": "uas\\cPeminjaman.cs",
