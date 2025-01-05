@@ -96,5 +96,19 @@ namespace uas
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tambahBuku tambahBuku = new tambahBuku();
+            tambahBuku.Show();
+            this.Close();
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dashboard dashboard = new dashboard();
+            dashboard.Show();
+            this.Close();
+        }
     }
 }

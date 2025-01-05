@@ -13,6 +13,13 @@ namespace uas
 {
     public partial class Anggota : Form
     {
+        private SqlConnection conn;
+
+        private void connection()
+        {
+            getConnection connection = new getConnection();
+            conn = connection.GetDatabaseConnection();
+        }
         public Anggota()
         {
             InitializeComponent();
@@ -20,15 +27,9 @@ namespace uas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            getConnection connection = new getConnection();
-            SqlConnection conn = connection.GetDatabaseConnection();
-
-            if (conn != null)
-            {
-                MessageBox.Show("koneksi berhasil", "suksess", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                conn.Close();
-            }
+            tambahAnggota tA = new tambahAnggota();
+            tA.Show();
+            this.Close();
         }
         private void peminjamanToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -61,6 +62,65 @@ namespace uas
                     this.Close();
                     return;
                 }
+            }
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dashboard dashboard = new dashboard();
+            dashboard.Show();
+            this.Close();
+        }
+
+        private void Anggota_Load(object sender, EventArgs e)
+        {
+            ReadData();
+        }
+
+        private void ReadData()
+        {
+            connection();
+            string query = "SELECT * FROM anggota";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            try
+            {
+                while (reader.Read())
+                {
+                    tabelAnggota.Rows.Add(
+                    reader["id"],
+                    reader["fotoKTM"].ToString(),
+                    reader["nim"].ToString(),
+                    reader["nama"].ToString(),
+                    reader["status"].ToString(),
+                    "Edit",
+                    "Delete"
+                    );
+                }
+            }
+            catch (Exception ex){
+                MessageBox.Show($"Gagal mengambil data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { 
+                reader.Close();
+            }
+        }
+
+        private void tabelAnggota_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idA = 0;
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == tabelAnggota.Columns["edit"].Index)
+                {
+                    idA = (int) tabelAnggota.Rows[e.RowIndex].Cells["id"].Value;
+                    if (idA != 0)
+                    {
+                        EditAnggota editAnggota = new EditAnggota();
+                        editAnggota.Show();
+                        editAnggota.Read(idA);
+                    }
+                } 
             }
         }
     }
