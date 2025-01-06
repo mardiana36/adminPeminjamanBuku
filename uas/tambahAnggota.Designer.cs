@@ -42,18 +42,18 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pilihStatus = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.inputNama = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.inputNim = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPilihFile = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.previewFile = new System.Windows.Forms.PictureBox();
+            this.pathFile = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnTambah = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             pERPUSTAKAANToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +64,7 @@
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.previewFile)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -142,7 +142,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(204, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10);
-            this.menuStrip1.Size = new System.Drawing.Size(1045, 61);
+            this.menuStrip1.Size = new System.Drawing.Size(925, 61);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -208,35 +208,35 @@
             this.panel3.AutoScroll = true;
             this.panel3.AutoSize = true;
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.pilihStatus);
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.inputNama);
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.inputNim);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnPilihFile);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.previewFile);
+            this.panel3.Controls.Add(this.pathFile);
             this.panel3.Controls.Add(this.groupBox1);
             this.panel3.Location = new System.Drawing.Point(223, 78);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1006, 796);
             this.panel3.TabIndex = 9;
             // 
-            // comboBox1
+            // pilihStatus
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.pilihStatus.AllowDrop = true;
+            this.pilihStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pilihStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pilihStatus.FormattingEnabled = true;
+            this.pilihStatus.Items.AddRange(new object[] {
             "Aktif",
             "Tidak Aktif"});
-            this.comboBox1.Location = new System.Drawing.Point(340, 579);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(496, 32);
-            this.comboBox1.TabIndex = 19;
+            this.pilihStatus.Location = new System.Drawing.Point(340, 579);
+            this.pilihStatus.Name = "pilihStatus";
+            this.pilihStatus.Size = new System.Drawing.Size(496, 32);
+            this.pilihStatus.TabIndex = 19;
             // 
             // label5
             // 
@@ -249,16 +249,16 @@
             this.label5.Text = "Status :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox3
+            // inputNama
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(340, 520);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(496, 33);
-            this.textBox3.TabIndex = 17;
+            this.inputNama.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputNama.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.inputNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNama.Location = new System.Drawing.Point(340, 520);
+            this.inputNama.Multiline = true;
+            this.inputNama.Name = "inputNama";
+            this.inputNama.Size = new System.Drawing.Size(496, 33);
+            this.inputNama.TabIndex = 17;
             // 
             // label4
             // 
@@ -271,16 +271,16 @@
             this.label4.Text = "Nama :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox2
+            // inputNim
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(340, 461);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(496, 33);
-            this.textBox2.TabIndex = 15;
+            this.inputNim.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.inputNim.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.inputNim.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputNim.Location = new System.Drawing.Point(340, 461);
+            this.inputNim.Multiline = true;
+            this.inputNim.Name = "inputNim";
+            this.inputNim.Size = new System.Drawing.Size(496, 33);
+            this.inputNim.TabIndex = 15;
             // 
             // label3
             // 
@@ -293,18 +293,19 @@
             this.label3.Text = "NIM :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // btnPilihFile
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(716, 398);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 35);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Pilih File";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnPilihFile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnPilihFile.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnPilihFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPilihFile.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnPilihFile.Location = new System.Drawing.Point(716, 398);
+            this.btnPilihFile.Name = "btnPilihFile";
+            this.btnPilihFile.Size = new System.Drawing.Size(120, 35);
+            this.btnPilihFile.TabIndex = 13;
+            this.btnPilihFile.Text = "Pilih File";
+            this.btnPilihFile.UseVisualStyleBackColor = false;
+            this.btnPilihFile.Click += new System.EventHandler(this.btnPilihFile_Click);
             // 
             // label2
             // 
@@ -318,34 +319,34 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // pictureBox1
+            // previewFile
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.pictureBox1.BackgroundImage = global::uas.Properties.Resources.question;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(340, 222);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(496, 170);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
+            this.previewFile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.previewFile.BackColor = System.Drawing.Color.Transparent;
+            this.previewFile.BackgroundImage = global::uas.Properties.Resources.question;
+            this.previewFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.previewFile.Location = new System.Drawing.Point(340, 222);
+            this.previewFile.Name = "previewFile";
+            this.previewFile.Size = new System.Drawing.Size(496, 170);
+            this.previewFile.TabIndex = 11;
+            this.previewFile.TabStop = false;
             // 
-            // textBox1
+            // pathFile
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(340, 400);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(370, 33);
-            this.textBox1.TabIndex = 12;
+            this.pathFile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pathFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pathFile.Location = new System.Drawing.Point(340, 400);
+            this.pathFile.Multiline = true;
+            this.pathFile.Name = "pathFile";
+            this.pathFile.ReadOnly = true;
+            this.pathFile.Size = new System.Drawing.Size(370, 33);
+            this.pathFile.TabIndex = 12;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnTambah);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox1.Location = new System.Drawing.Point(84, 46);
@@ -355,18 +356,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tambah Anggota";
             // 
-            // button2
+            // btnTambah
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(87, 604);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(671, 51);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Tambah";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnTambah.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTambah.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnTambah.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTambah.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTambah.Location = new System.Drawing.Point(87, 604);
+            this.btnTambah.Name = "btnTambah";
+            this.btnTambah.Size = new System.Drawing.Size(671, 51);
+            this.btnTambah.TabIndex = 0;
+            this.btnTambah.Text = "Tambah";
+            this.btnTambah.UseVisualStyleBackColor = false;
+            this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // panel1
             // 
@@ -395,7 +397,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.previewFile)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -414,17 +416,17 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox pilihStatus;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox inputNama;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox inputNim;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPilihFile;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox previewFile;
+        private System.Windows.Forms.TextBox pathFile;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnTambah;
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +16,11 @@ namespace uas
     {
         private SqlConnection conn;
 
-        private void connection()
-        {
-            getConnection connection = new getConnection();
-            conn = connection.GetDatabaseConnection();
-        }
         public Anggota()
         {
             InitializeComponent();
+            getConnection connection = new getConnection();
+            conn = connection.GetDatabaseConnection();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,7 +77,6 @@ namespace uas
 
         private void ReadData()
         {
-            connection();
             string query = "SELECT * FROM anggota";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataReader reader = cmd.ExecuteReader();
@@ -87,9 +84,11 @@ namespace uas
             {
                 while (reader.Read())
                 {
+                    string path = Path.Combine(Application.StartupPath, "..", "..", "img", reader["fotoKTM"].ToString());
+                    Image imgKtm = Image.FromFile(path);
                     tabelAnggota.Rows.Add(
                     reader["id"],
-                    reader["fotoKTM"].ToString(),
+                    imgKtm,
                     reader["nim"].ToString(),
                     reader["nama"].ToString(),
                     reader["status"].ToString(),
