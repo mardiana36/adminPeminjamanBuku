@@ -15,7 +15,6 @@ namespace uas
     public partial class Anggota : Form
     {
         private SqlConnection conn;
-
         public Anggota()
         {
             InitializeComponent();
@@ -72,6 +71,7 @@ namespace uas
 
         private void Anggota_Load(object sender, EventArgs e)
         {
+            Console.WriteLine("load data...");
             ReadData();
         }
 
@@ -82,10 +82,12 @@ namespace uas
             SqlDataReader reader = cmd.ExecuteReader();
             try
             {
+                tabelAnggota.Rows.Clear();
                 while (reader.Read())
                 {
                     string path = Path.Combine(Application.StartupPath, "..", "..", "img", reader["fotoKTM"].ToString());
                     Image imgKtm = Image.FromFile(path);
+                    Console.WriteLine("add data...");
                     tabelAnggota.Rows.Add(
                     reader["id"],
                     imgKtm,
@@ -112,15 +114,46 @@ namespace uas
             {
                 if (e.ColumnIndex == tabelAnggota.Columns["edit"].Index)
                 {
-                    idA = (int) tabelAnggota.Rows[e.RowIndex].Cells["id"].Value;
-                    if (idA != 0)
-                    {
-                        EditAnggota editAnggota = new EditAnggota();
-                        editAnggota.Show();
-                        editAnggota.Read(idA);
+                    if (tabelAnggota.Rows.Count > 1) {
+                        idA = (int)tabelAnggota.Rows[e.RowIndex].Cells["id"].Value;
+                        if (idA != 0)
+                        {
+                            EditAnggota editAnggota = new EditAnggota();
+                            editAnggota.Read(idA);
+                            editAnggota.Show();
+                            this.Hide();
+                        }
                     }
+                }else if (e.ColumnIndex == tabelAnggota.Columns["delete"].Index)
+                {
+                    if (tabelAnggota.Rows.Count > 1)
+                    {
+                        idA = (int)tabelAnggota.Rows[e.RowIndex].Cells["id"].Value;
+                        if (idA != 0)
+                        {
+                            DialogResult result = MessageBox.Show("Apakah Anda Yakin Ingin Menghapus Data Ini?", "Konfirmasi Hapus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (result == DialogResult.Yes)
+                            {
+                                string query = "DELETE FROM anggota WHERE id = @id";
+                                SqlCommand cmd = new SqlCommand(query, conn);
+                                cmd.Parameters.AddWithValue("@id", idA);
+                                int esecute = cmd.ExecuteNonQuery();
+                                if (esecute > 0)
+                                {                              
+                                    MessageBox.Show("Data Berhasil Di hapus!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    ReadData();
+                                }
+                            }
+                        }
+                    }
+                    
                 } 
             }
+        }
+
+        private void anggotaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

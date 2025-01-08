@@ -111,6 +111,7 @@
             anggotaToolStripMenuItem.Name = "anggotaToolStripMenuItem";
             anggotaToolStripMenuItem.Size = new System.Drawing.Size(111, 41);
             anggotaToolStripMenuItem.Text = "Anggota";
+            anggotaToolStripMenuItem.Click += new System.EventHandler(this.anggotaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -261,10 +262,11 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tabelAnggota.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tabelAnggota.RowHeadersWidth = 51;
+            this.tabelAnggota.RowHeadersWidth = 100;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.tabelAnggota.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.tabelAnggota.Size = new System.Drawing.Size(1297, 375);
+            this.tabelAnggota.Size = new System.Drawing.Size(1297, 377);
+            this.tabelAnggota.StandardTab = true;
             this.tabelAnggota.TabIndex = 7;
             this.tabelAnggota.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelAnggota_CellContentClick);
             // 
@@ -282,6 +284,7 @@
             // 
             // id
             // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.id.HeaderText = "id";
             this.id.Name = "id";
             this.id.ReadOnly = true;
@@ -289,7 +292,7 @@
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Column1.HeaderText = "Foto KTM";
             this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Column1.MinimumWidth = 6;
@@ -346,7 +349,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Anggota";
             this.Text = "Anggota";
-            this.Load += new System.EventHandler(this.Anggota_Load);
+            this.Shown += new System.EventHandler(this.Anggota_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -44,8 +44,8 @@ namespace uas
 
         private void btnRegistrasi_Click(object sender, EventArgs e)
         {
-            peminjaman form = new peminjaman();
-            form.Show();
+            Anggota anggota = new Anggota();
+            anggota.Show();
             this.Hide();
         }
 
