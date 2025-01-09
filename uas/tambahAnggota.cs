@@ -81,12 +81,10 @@ namespace uas
 
         private void btnPilihFile_Click(object sender, EventArgs e)
         {
-            directoryFile = null;
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image File|*.jpg;*.png;*.jpeg";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                previewFile.BackgroundImage = null;
                 previewFile.BackgroundImage = Image.FromFile(openFileDialog.FileName);
                 pathFile.Text = openFileDialog.SafeFileName;
                 directoryFile = openFileDialog.FileName;
@@ -107,12 +105,9 @@ namespace uas
             {
                 MessageBox.Show("Nama Tidak Boleh kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }else if (pilihStatus.SelectedItem == null)
-            {
-                MessageBox.Show("Pilih salah satu Status!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
             }
 
+            
             string sourceFile = directoryFile;
             string extension = Path.GetExtension(sourceFile);
             string newFileName = Guid.NewGuid().ToString() + extension;
@@ -151,6 +146,11 @@ namespace uas
                 MessageBox.Show($"Gagal Menambah data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void tambahAnggota_Shown(object sender, EventArgs e)
+        {
+            pilihStatus.Text = "Aktif";
         }
     }
 }

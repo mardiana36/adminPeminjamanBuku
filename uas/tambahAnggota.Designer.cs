@@ -228,15 +228,16 @@
             // 
             this.pilihStatus.AllowDrop = true;
             this.pilihStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pilihStatus.Enabled = false;
             this.pilihStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pilihStatus.FormattingEnabled = true;
             this.pilihStatus.Items.AddRange(new object[] {
-            "Aktif",
-            "Tidak Aktif"});
+            "Aktif"});
             this.pilihStatus.Location = new System.Drawing.Point(340, 579);
             this.pilihStatus.Name = "pilihStatus";
             this.pilihStatus.Size = new System.Drawing.Size(496, 32);
             this.pilihStatus.TabIndex = 19;
+            this.pilihStatus.Tag = "";
             // 
             // label5
             // 
@@ -391,6 +392,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "tambahAnggota";
             this.Text = "tambahAnggota";
+            this.Shown += new System.EventHandler(this.tambahAnggota_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
