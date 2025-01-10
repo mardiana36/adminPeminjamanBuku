@@ -15,6 +15,7 @@ namespace uas
     public partial class Anggota : Form
     {
         private SqlConnection conn;
+        
         public Anggota()
         {
             InitializeComponent();
@@ -25,8 +26,9 @@ namespace uas
         private void button1_Click(object sender, EventArgs e)
         {
             tambahAnggota tA = new tambahAnggota();
-            tA.Show();
-            this.Close();
+            tA.ShowDialog();
+            ReadData();
+         
         }
         private void peminjamanToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -71,8 +73,9 @@ namespace uas
 
         private void Anggota_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("load data...");
             ReadData();
+            usernameL.Text = "Username: " + Properties.Settings.Default.username;
+            emailL.Text = "Email: " + Properties.Settings.Default.email;
         }
 
         private void ReadData()
@@ -87,7 +90,6 @@ namespace uas
                 {
                     string path = Path.Combine(Application.StartupPath, "..", "..", "img", reader["fotoKTM"].ToString());
                     Image imgKtm = Image.FromFile(path);
-                    Console.WriteLine("add data...");
                     tabelAnggota.Rows.Add(
                     reader["id"],
                     imgKtm,
@@ -120,8 +122,8 @@ namespace uas
                         {
                             EditAnggota editAnggota = new EditAnggota();
                             editAnggota.Read(idA);
-                            editAnggota.Show();
-                            this.Hide();
+                            editAnggota.ShowDialog();
+                            ReadData();
                         }
                     }
                 }else if (e.ColumnIndex == tabelAnggota.Columns["delete"].Index)

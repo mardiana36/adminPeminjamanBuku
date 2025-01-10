@@ -28,19 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ToolStripMenuItem pERPUSTAKAANToolStripMenuItem;
-            System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
-            System.Windows.Forms.ToolStripMenuItem peminjamanToolStripMenuItem;
-            System.Windows.Forms.ToolStripMenuItem pengembalianToolStripMenuItem;
-            System.Windows.Forms.ToolStripMenuItem anggotaToolStripMenuItem;
-            System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.userNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.emailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pilihStatus = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,152 +42,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTambah = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            pERPUSTAKAANToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            peminjamanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            pengembalianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            anggotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.previewFile)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pERPUSTAKAANToolStripMenuItem
-            // 
-            pERPUSTAKAANToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pERPUSTAKAANToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
-            pERPUSTAKAANToolStripMenuItem.Name = "pERPUSTAKAANToolStripMenuItem";
-            pERPUSTAKAANToolStripMenuItem.Size = new System.Drawing.Size(240, 41);
-            pERPUSTAKAANToolStripMenuItem.Text = "PERPUSTAKAAN";
-            // 
-            // dashboardToolStripMenuItem
-            // 
-            dashboardToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dashboardToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new System.Drawing.Size(126, 41);
-            dashboardToolStripMenuItem.Text = "Dashboard";
-            dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
-            // 
-            // peminjamanToolStripMenuItem
-            // 
-            peminjamanToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            peminjamanToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
-            peminjamanToolStripMenuItem.Name = "peminjamanToolStripMenuItem";
-            peminjamanToolStripMenuItem.Size = new System.Drawing.Size(139, 41);
-            peminjamanToolStripMenuItem.Text = "Peminjaman";
-            peminjamanToolStripMenuItem.Click += new System.EventHandler(this.peminjamanToolStripMenuItem_Click);
-            // 
-            // pengembalianToolStripMenuItem
-            // 
-            pengembalianToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            pengembalianToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
-            pengembalianToolStripMenuItem.Name = "pengembalianToolStripMenuItem";
-            pengembalianToolStripMenuItem.Size = new System.Drawing.Size(156, 41);
-            pengembalianToolStripMenuItem.Text = "Pengembalian";
-            pengembalianToolStripMenuItem.Click += new System.EventHandler(this.pengembalianToolStripMenuItem_Click);
-            // 
-            // anggotaToolStripMenuItem
-            // 
-            anggotaToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
-            anggotaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            anggotaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            anggotaToolStripMenuItem.Name = "anggotaToolStripMenuItem";
-            anggotaToolStripMenuItem.Size = new System.Drawing.Size(111, 41);
-            anggotaToolStripMenuItem.Text = "Anggota";
-            anggotaToolStripMenuItem.Click += new System.EventHandler(this.anggotaToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new System.Drawing.Size(71, 41);
-            toolStripMenuItem1.Text = "Buku";
-            toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.AllowDrop = true;
-            this.menuStrip1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            pERPUSTAKAANToolStripMenuItem,
-            dashboardToolStripMenuItem,
-            peminjamanToolStripMenuItem,
-            pengembalianToolStripMenuItem,
-            anggotaToolStripMenuItem,
-            toolStripMenuItem1,
-            this.toolStripMenuItem2});
-            this.menuStrip1.Location = new System.Drawing.Point(204, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(10);
-            this.menuStrip1.Size = new System.Drawing.Size(925, 61);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.AutoSize = false;
-            this.toolStripMenuItem2.BackgroundImage = global::uas.Properties.Resources.userMenu;
-            this.toolStripMenuItem2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userNameToolStripMenuItem,
-            this.emailToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.logoutToolStripMenuItem});
-            this.toolStripMenuItem2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Padding = new System.Windows.Forms.Padding(5);
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(60, 35);
-            // 
-            // userNameToolStripMenuItem
-            // 
-            this.userNameToolStripMenuItem.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.userNameToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
-            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.userNameToolStripMenuItem.Text = "UserName : ";
-            // 
-            // emailToolStripMenuItem
-            // 
-            this.emailToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.emailToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
-            this.emailToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.emailToolStripMenuItem.Text = "Email : ";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.toolStripSeparator1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(146, 6);
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.Red;
-            this.logoutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Controls.Add(this.menuStrip1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1458, 61);
-            this.panel2.TabIndex = 6;
             // 
             // panel3
             // 
@@ -376,7 +222,6 @@
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel1.CausesValidation = false;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -393,10 +238,6 @@
             this.Name = "tambahAnggota";
             this.Text = "tambahAnggota";
             this.Shown += new System.EventHandler(this.tambahAnggota_Shown);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.previewFile)).EndInit();
@@ -408,14 +249,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem emailToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem userNameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox pilihStatus;
