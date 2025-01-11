@@ -34,14 +34,15 @@
             System.Windows.Forms.ToolStripMenuItem pengembalianToolStripMenuItem;
             System.Windows.Forms.ToolStripMenuItem anggotaToolStripMenuItem;
             System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(pengembalian));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
+            this.updateButton = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.insertButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -77,6 +78,7 @@
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
             dashboardToolStripMenuItem.Size = new System.Drawing.Size(161, 50);
             dashboardToolStripMenuItem.Text = "Dashboard";
+            dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
             // peminjamanToolStripMenuItem
             // 
@@ -124,10 +126,10 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.deleteButton);
+            this.panel1.Controls.Add(this.updateButton);
             this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.insertButton);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(45, 104);
             this.panel1.Name = "panel1";
@@ -139,8 +141,17 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(40, 126);
             this.dataGridView1.Name = "dataGridView1";
@@ -162,34 +173,35 @@
             this.button4.TabIndex = 7;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // deleteButton
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(248, 65);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 32);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.deleteButton.BackColor = System.Drawing.Color.Red;
+            this.deleteButton.FlatAppearance.BorderSize = 0;
+            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteButton.ForeColor = System.Drawing.Color.White;
+            this.deleteButton.Location = new System.Drawing.Point(248, 65);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(92, 32);
+            this.deleteButton.TabIndex = 6;
+            this.deleteButton.Text = "Delete";
+            this.deleteButton.UseVisualStyleBackColor = false;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
-            // button2
+            // updateButton
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(145, 65);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 32);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.updateButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.updateButton.FlatAppearance.BorderSize = 0;
+            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.ForeColor = System.Drawing.Color.White;
+            this.updateButton.Location = new System.Drawing.Point(145, 65);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(92, 32);
+            this.updateButton.TabIndex = 5;
+            this.updateButton.Text = "Update";
+            this.updateButton.UseVisualStyleBackColor = false;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // richTextBox1
             // 
@@ -202,20 +214,20 @@
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
             // 
-            // button1
+            // insertButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(40, 65);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 32);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.insertButton.BackColor = System.Drawing.SystemColors.Highlight;
+            this.insertButton.FlatAppearance.BorderSize = 0;
+            this.insertButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.insertButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertButton.ForeColor = System.Drawing.Color.White;
+            this.insertButton.Location = new System.Drawing.Point(40, 65);
+            this.insertButton.Name = "insertButton";
+            this.insertButton.Size = new System.Drawing.Size(92, 32);
+            this.insertButton.TabIndex = 1;
+            this.insertButton.Text = "Add";
+            this.insertButton.UseVisualStyleBackColor = false;
+            this.insertButton.Click += new System.EventHandler(this.InsertButton_Click);
             // 
             // label1
             // 
@@ -280,7 +292,7 @@
             this.userNameToolStripMenuItem.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.userNameToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.userNameToolStripMenuItem.Name = "userNameToolStripMenuItem";
-            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.userNameToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.userNameToolStripMenuItem.Text = "UserName : ";
             // 
             // emailToolStripMenuItem
@@ -288,7 +300,7 @@
             this.emailToolStripMenuItem.BackColor = System.Drawing.SystemColors.Highlight;
             this.emailToolStripMenuItem.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.emailToolStripMenuItem.Name = "emailToolStripMenuItem";
-            this.emailToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.emailToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.emailToolStripMenuItem.Text = "Email : ";
             // 
             // toolStripSeparator1
@@ -296,14 +308,14 @@
             this.toolStripSeparator1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.toolStripSeparator1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(169, 6);
             // 
             // logoutToolStripMenuItem
             // 
             this.logoutToolStripMenuItem.BackColor = System.Drawing.Color.Red;
             this.logoutToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
@@ -317,6 +329,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "pengembalian";
             this.Text = "pengembalian";
+            this.Load += new System.EventHandler(this.pengembalian_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -333,10 +346,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button deleteButton;
+        private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button insertButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.MenuStrip menuStrip1;

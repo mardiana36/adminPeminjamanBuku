@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace uas
 {
@@ -17,22 +18,92 @@ namespace uas
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void InsertButton_Click(object sender, EventArgs e)
         {
             cPeminjaman pinjam = new cPeminjaman();
-            pinjam.Show();
+            if (pinjam.ShowDialog() == DialogResult.OK)
+            {
+                LoadDataPeminjaman();
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void UpdateButton_Click(object sender, EventArgs e)
         {
-            uPeminjaman update = new uPeminjaman();
-            update.Show();
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                
+                var selectedRow = dataGridView1.SelectedRows[0];
+                string nim = selectedRow.Cells["NIM"].Value.ToString();
+                DateTime tglPinjam = Convert.ToDateTime(selectedRow.Cells["TanggalPeminjaman"].Value);
+                DateTime tenggatPinjam = Convert.ToDateTime(selectedRow.Cells["TenggatPeminjaman"].Value);
+                int idPeminjaman = Convert.ToInt32(selectedRow.Cells["ID"].Value); 
+               
+                uPeminjaman updateForm = new uPeminjaman(nim, tglPinjam, tenggatPinjam, idPeminjaman);
+                if (updateForm.ShowDialog() == DialogResult.OK)
+                {
+                    LoadDataPeminjaman();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Silakan pilih peminjaman yang ingin diubah.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void peminjaman_Load(object sender, EventArgs e)
         {
-
+            LoadDataPeminjaman();
         }
+
+        private void LoadDataPeminjaman()
+        {
+            getConnection connection = new getConnection();
+            using (SqlConnection conn = connection.GetDatabaseConnection())
+            {
+                if (conn == null) return;
+
+                try
+                {
+                    string query = @"
+                        SELECT 
+                            p.id AS ID,  
+                            a.nama AS NamaAnggota,
+                            a.nim AS NIM,
+                            p.tgl_pinjam AS TanggalPeminjaman,
+                            p.tenggat_pinjam AS TenggatPeminjaman,
+                            STRING_AGG(b.judul, ', ') AS BukuDipinjam
+                        FROM 
+                            peminjaman p
+                        JOIN 
+                            anggota a ON p.id_mhs = a.id
+                        JOIN 
+                            detail_peminjaman dp ON p.id = dp.id_pinjam
+                        JOIN 
+                            buku b ON dp.id_buku = b.id
+                        GROUP BY 
+                            p.id, a.nama, a.nim, p.tgl_pinjam, p.tenggat_pinjam
+                        ORDER BY 
+                            p.id ASC";
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+
+                    dataGridView1.DataSource = dataTable;
+                    dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridView1.Columns["ID"].HeaderText = "ID Peminjaman";
+                    dataGridView1.Columns["NamaAnggota"].HeaderText = "Nama Anggota"; 
+                    dataGridView1.Columns["NIM"].HeaderText = "NIM"; 
+                    dataGridView1.Columns["TanggalPeminjaman"].HeaderText = "Tanggal Peminjaman"; 
+                    dataGridView1.Columns["TenggatPeminjaman"].HeaderText = "Tenggat Peminjaman"; 
+                    dataGridView1.Columns["BukuDipinjam"].HeaderText = "Daftar Buku"; 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Gagal memuat data: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
 
         private void pengembalianToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -66,6 +137,78 @@ namespace uas
                     return;
                 }
             }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                
+                var selectedRow = dataGridView1.SelectedRows[0];
+                int idPeminjaman = Convert.ToInt32(selectedRow.Cells["ID"].Value); 
+
+                
+                var confirmResult = MessageBox.Show("Apakah Anda yakin ingin menghapus peminjaman ini?",
+                                                     "Konfirmasi Hapus",
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Warning);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    DeletePeminjaman(idPeminjaman);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Silakan pilih peminjaman yang ingin dihapus.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void DeletePeminjaman(int idPeminjaman)
+        {
+            getConnection connection = new getConnection();
+            using (SqlConnection conn = connection.GetDatabaseConnection())
+            {
+                if (conn == null) return; 
+
+                try
+                { 
+                    string deleteDetailQuery = "DELETE FROM detail_peminjaman WHERE id_pinjam = @idPinjam";
+                    using (SqlCommand cmdDetail = new SqlCommand(deleteDetailQuery, conn))
+                    {
+                        cmdDetail.Parameters.AddWithValue("@idPinjam", idPeminjaman);
+                        cmdDetail.ExecuteNonQuery(); 
+                    }
+
+                    
+                    string deletePeminjamanQuery = "DELETE FROM peminjaman WHERE id = @idPeminjaman";
+                    using (SqlCommand cmdPeminjaman = new SqlCommand(deletePeminjamanQuery, conn))
+                    {
+                        cmdPeminjaman.Parameters.AddWithValue("@idPeminjaman", idPeminjaman);
+                        int rowsAffected = cmdPeminjaman.ExecuteNonQuery(); 
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Peminjaman berhasil dihapus.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadDataPeminjaman(); 
+                        }
+                        else
+                        {
+                            MessageBox.Show("Gagal menghapus peminjaman.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error menghapus peminjaman: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            } 
+        }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dashboard dashboard = new dashboard();
+            dashboard.Show();
+            this.Close();
         }
     }
 }
