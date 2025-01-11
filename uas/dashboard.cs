@@ -75,28 +75,44 @@ namespace uas
         {
             peminjaman peminjaman = new peminjaman();
             peminjaman.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void pengembalianToolStripMenuItem_Click(object sender, EventArgs e)
         {
             pengembalian pengembalian = new pengembalian();
             pengembalian.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void anggotaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Anggota anggota = new Anggota();
             anggota.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             buku buku = new buku();
             buku.Show();
-            this.Close();
+            this.Hide();
+        }
+
+        private void dashboard_Shown(object sender, EventArgs e)
+        {
+            usernameL.Text = "Username: " + Properties.Settings.Default.username;
+            emailL.Text = "Email: " + Properties.Settings.Default.email;
+        }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+             Properties.Settings.Default.username = null;
+             Properties.Settings.Default.email = null;
+             Properties.Settings.Default.id = 0;
+             Properties.Settings.Default.isLogin = false;
+             Program.LoginForm.Show();
+             this.Close();
         }
     }
 }

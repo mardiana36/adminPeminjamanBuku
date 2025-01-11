@@ -128,15 +128,12 @@ namespace uas
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is cPeminjaman)
-                {
-                    form.Show();
-                    this.Close();
-                    return;
-                }
-            }
+            Properties.Settings.Default.username = null;
+            Properties.Settings.Default.email = null;
+            Properties.Settings.Default.id = 0;
+            Properties.Settings.Default.isLogin = false;
+            Program.LoginForm.Show();
+            this.Close();
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)
@@ -209,6 +206,12 @@ namespace uas
             dashboard dashboard = new dashboard();
             dashboard.Show();
             this.Close();
+        }
+
+        private void peminjaman_Shown(object sender, EventArgs e)
+        {
+            usernameL.Text = "Username: " + Properties.Settings.Default.username;
+            emailL.Text = "Email: " + Properties.Settings.Default.email;
         }
     }
 }

@@ -108,7 +108,7 @@ namespace uas
                     {
                         cmd.Parameters.AddWithValue("@tglPinjam", tanggalPeminjaman);
                         cmd.Parameters.AddWithValue("@tenggatPinjam", tenggatPeminjaman);
-                        cmd.Parameters.AddWithValue("@idUser ", 1); 
+                        cmd.Parameters.AddWithValue("@idUser ", Properties.Settings.Default.id); 
                         cmd.Parameters.AddWithValue("@idMhs", idAnggota);
 
                         int idPeminjaman = (int)cmd.ExecuteScalar(); 
