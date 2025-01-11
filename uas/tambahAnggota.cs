@@ -114,5 +114,10 @@ namespace uas
         {
             pilihStatus.Text = "Aktif";
         }
+
+        private void tambahAnggota_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -237,6 +237,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "tambahAnggota";
             this.Text = "tambahAnggota";
+            this.Load += new System.EventHandler(this.tambahAnggota_Load);
             this.Shown += new System.EventHandler(this.tambahAnggota_Shown);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

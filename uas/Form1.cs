@@ -17,13 +17,13 @@ namespace uas
         private bool statusPw = false;
         private bool statusPwR = false;
         private SqlConnection conn;
+
         public Form1()
         {
             InitializeComponent();
             getConnection connection = new getConnection();
             conn = connection.GetDatabaseConnection();
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -84,29 +84,41 @@ namespace uas
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string query = "SELECT username, email, password FROM userL";
+            if (string.IsNullOrEmpty(inputEmailL.Text))
+            {
+                MessageBox.Show("Username/Email tidak boleh kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (string.IsNullOrEmpty(inputPasswordL.Text))
+            {
+                MessageBox.Show("Password tidak boleh kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string query = "SELECT id, username, email, password FROM userL";
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataReader reader = cmd.ExecuteReader(); 
+            bool check = false;
             try
             {
                 while (reader.Read()) {
                     if ((inputEmailL.Text == reader["username"].ToString() || inputEmailL.Text == reader["email"].ToString()) && verifiyPassword(inputPasswordL.Text, reader["password"].ToString()) == true)
                     {
-                        Anggota anggota = new Anggota();
+                        dashboard dash = new dashboard();
+                        Properties.Settings.Default.id = (int) reader["id"];
                         Properties.Settings.Default.username =reader["username"].ToString();
                         Properties.Settings.Default.email =reader["email"].ToString();
                         Properties.Settings.Default.isLogin =true;
                         MessageBox.Show("Login Berhasil", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        anggota.Show();
+                        dash.Show();
                         this.Hide();
+                        check = true;
                         break;
                     }
-                    else
-                    {
-                        MessageBox.Show($"Username/Email/Password Salah!", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
                 }
-                
+                if (!check)
+                {
+                    MessageBox.Show($"Username/Email/Password Salah!", "Gagal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             catch (Exception ex)
             {
@@ -161,6 +173,20 @@ namespace uas
 
         private void btnRegis_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(inputUsernameR.Text))
+            {
+                MessageBox.Show("Username tidak boleh kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            } else if (string.IsNullOrEmpty(inputEmailR.Text))
+            {
+                MessageBox.Show("Email tidak boleh kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }else if (string.IsNullOrEmpty(inputPasswordR.Text))
+            {
+                MessageBox.Show("Password tidak boleh kosong!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string query = "INSERT INTO userL (username,email,password,role) VALUES (@username, @email, @password, @role)";
             SqlCommand cmd = new SqlCommand(query, conn);
             try

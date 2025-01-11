@@ -91,15 +91,12 @@ namespace uas
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            foreach (Form form in Application.OpenForms)
-            {
-                if (form is cPeminjaman)
-                {
-                    form.Show();  
-                    this.Close();  
-                    return;
-                }
-            }
+            Properties.Settings.Default.username = null;
+            Properties.Settings.Default.email = null;
+            Properties.Settings.Default.id = 0;
+            Properties.Settings.Default.isLogin = false;
+            Program.LoginForm.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)

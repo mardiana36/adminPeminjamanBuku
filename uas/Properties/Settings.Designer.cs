@@ -58,5 +58,17 @@ namespace uas.Properties {
                 this["isLogin"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int id {
+            get {
+                return ((int)(this["id"]));
+            }
+            set {
+                this["id"] = value;
+            }
+        }
     }
 }
